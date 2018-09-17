@@ -1,0 +1,13 @@
+diff --git scripts/gcc.sh scripts/gcc.sh
+index 9d46a573..1ba647da 100755
+--- scripts/gcc.sh
++++ scripts/gcc.sh
+@@ -40,7 +40,7 @@ else
+ fi
+ 
+ dl_gcc_generic () {
+-	WGET="wget -c --directory-prefix=${gcc_dir}/"
++	WGET="wget -c --no-check-certificate --directory-prefix=${gcc_dir}/"
+ 	if [ ! -f "${gcc_dir}/${directory}/${datestamp}" ] ; then
+ 		echo "Installing: ${toolchain_name}"
+ 		echo "-----------------------------"
